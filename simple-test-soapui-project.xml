@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="bfa2a56b-179b-4e71-b6ea-63abaf7ae2ed" activeEnvironment="Default environment" name="SOAP Project 2" lastOpened="2017-04-06T15:43:50.384+03:00" resourceRoot="" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="3f475adb-bfc9-4f82-8e46-9ec70229374d" wsaVersion="NONE" name="lengthUnitSoap" type="wsdl" bindingName="{http://www.webserviceX.NET/}lengthUnitSoap" soapVersion="1_1" anonymous="optional" definition="http://www.webservicex.net/length.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.webservicex.net/length.asmx</con:endpoint></con:endpoints><con:operation id="622709c3-c3db-4277-8af2-257e259c407d" isOneWay="false" action="http://www.webserviceX.NET/ChangeLengthUnit" name="ChangeLengthUnit" bindingOperationName="ChangeLengthUnit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="56fc2ba0-a22c-40a1-b437-8ab72f8ee6f0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/length.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:ChangeLengthUnit>\r
+         <web:LengthValue>?</web:LengthValue>\r
+         <web:fromLengthUnit>?</web:fromLengthUnit>\r
+         <web:toLengthUnit>?</web:toLengthUnit>\r
+      </web:ChangeLengthUnit>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/ChangeLengthUnit"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="1a2f858b-3ab0-40d5-bc1f-e230e8071a82" wsaVersion="NONE" name="lengthUnitSoap12" type="wsdl" bindingName="{http://www.webserviceX.NET/}lengthUnitSoap12" soapVersion="1_2" anonymous="optional" definition="http://www.webservicex.net/length.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.webservicex.net/length.asmx?WSDL"><con:part><con:url>http://www.webservicex.net/length.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.webserviceX.NET/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webserviceX.NET/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.webserviceX.NET/">
+      <s:element name="ChangeLengthUnit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LengthValue" type="s:double"/>
+            <s:element minOccurs="1" maxOccurs="1" name="fromLengthUnit" type="tns:Lengths"/>
+            <s:element minOccurs="1" maxOccurs="1" name="toLengthUnit" type="tns:Lengths"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="Lengths">
+        <s:restriction base="s:string">
+          <s:enumeration value="Angstroms"/>
+          <s:enumeration value="Nanometers"/>
+          <s:enumeration value="Microinch"/>
+          <s:enumeration value="Microns"/>
+          <s:enumeration value="Mils"/>
+          <s:enumeration value="Millimeters"/>
+          <s:enumeration value="Centimeters"/>
+          <s:enumeration value="Inches"/>
+          <s:enumeration value="Links"/>
+          <s:enumeration value="Spans"/>
+          <s:enumeration value="Feet"/>
+          <s:enumeration value="Cubits"/>
+          <s:enumeration value="Varas"/>
+          <s:enumeration value="Yards"/>
+          <s:enumeration value="Meters"/>
+          <s:enumeration value="Fathoms"/>
+          <s:enumeration value="Rods"/>
+          <s:enumeration value="Chains"/>
+          <s:enumeration value="Furlongs"/>
+          <s:enumeration value="Cablelengths"/>
+          <s:enumeration value="Kilometers"/>
+          <s:enumeration value="Miles"/>
+          <s:enumeration value="Nauticalmile"/>
+          <s:enumeration value="League"/>
+          <s:enumeration value="Nauticalleague"/>
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ChangeLengthUnitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeLengthUnitResult" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="double" type="s:double"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ChangeLengthUnitSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeLengthUnit"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeLengthUnitResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitHttpGetIn">
+    <wsdl:part name="LengthValue" type="s:string"/>
+    <wsdl:part name="fromLengthUnit" type="s:string"/>
+    <wsdl:part name="toLengthUnit" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitHttpGetOut">
+    <wsdl:part name="Body" element="tns:double"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitHttpPostIn">
+    <wsdl:part name="LengthValue" type="s:string"/>
+    <wsdl:part name="fromLengthUnit" type="s:string"/>
+    <wsdl:part name="toLengthUnit" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitHttpPostOut">
+    <wsdl:part name="Body" element="tns:double"/>
+  </wsdl:message>
+  <wsdl:portType name="lengthUnitSoap">
+    <wsdl:operation name="ChangeLengthUnit">
+      <wsdl:input message="tns:ChangeLengthUnitSoapIn"/>
+      <wsdl:output message="tns:ChangeLengthUnitSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="lengthUnitHttpGet">
+    <wsdl:operation name="ChangeLengthUnit">
+      <wsdl:input message="tns:ChangeLengthUnitHttpGetIn"/>
+      <wsdl:output message="tns:ChangeLengthUnitHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="lengthUnitHttpPost">
+    <wsdl:operation name="ChangeLengthUnit">
+      <wsdl:input message="tns:ChangeLengthUnitHttpPostIn"/>
+      <wsdl:output message="tns:ChangeLengthUnitHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="lengthUnitSoap" type="tns:lengthUnitSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ChangeLengthUnit">
+      <soap:operation soapAction="http://www.webserviceX.NET/ChangeLengthUnit" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="lengthUnitSoap12" type="tns:lengthUnitSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ChangeLengthUnit">
+      <soap12:operation soapAction="http://www.webserviceX.NET/ChangeLengthUnit" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="lengthUnitHttpGet" type="tns:lengthUnitHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="ChangeLengthUnit">
+      <http:operation location="/ChangeLengthUnit"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="lengthUnitHttpPost" type="tns:lengthUnitHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="ChangeLengthUnit">
+      <http:operation location="/ChangeLengthUnit"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="lengthUnit">
+    <wsdl:port name="lengthUnitSoap" binding="tns:lengthUnitSoap">
+      <soap:address location="http://www.webservicex.net/length.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="lengthUnitSoap12" binding="tns:lengthUnitSoap12">
+      <soap12:address location="http://www.webservicex.net/length.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="lengthUnitHttpGet" binding="tns:lengthUnitHttpGet">
+      <http:address location="http://www.webservicex.net/length.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="lengthUnitHttpPost" binding="tns:lengthUnitHttpPost">
+      <http:address location="http://www.webservicex.net/length.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.webservicex.net/length.asmx</con:endpoint></con:endpoints><con:operation id="6152ee8d-643a-4ded-902d-65048b380554" isOneWay="false" action="http://www.webserviceX.NET/ChangeLengthUnit" name="ChangeLengthUnit" bindingOperationName="ChangeLengthUnit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3561837c-e139-45ac-b427-0a7d4633597a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/length.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <web:ChangeLengthUnit>\r
+         <web:LengthValue>?</web:LengthValue>\r
+         <web:fromLengthUnit>?</web:fromLengthUnit>\r
+         <web:toLengthUnit>?</web:toLengthUnit>\r
+      </web:ChangeLengthUnit>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/lengthUnitSoap/ChangeLengthUnitRequest"/></con:call></con:operation></con:interface><con:testSuite id="a946e361-c9d7-40e2-aa87-75f3d779d1eb" name="lengthUnitSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="28e5e417-c746-4a53-a61e-527dd435c2a1" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ChangeLengthUnit TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="request" id="90e832e4-a8a3-4f60-8ae1-928897131e04" name="ChangeLengthUnit"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>lengthUnitSoap</con:interface><con:operation>ChangeLengthUnit</con:operation><con:request name="ChangeLengthUnit" id="36623866-d91c-4bf8-ba42-e299a44825d3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/length.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:ChangeLengthUnit>
+         <web:LengthValue>105</web:LengthValue>
+         <web:fromLengthUnit>Centimeters</web:fromLengthUnit>
+         <web:toLengthUnit>Meters</web:toLengthUnit>
+      </web:ChangeLengthUnit>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://www.webserviceX.NET/ChangeLengthUnit" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="c08c929f-72f0-444c-803c-0bd62d1ee563" name="lengthUnitSoap12 TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1bcd446b-e76a-4804-9ec4-feeca5e066b5" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ChangeLengthUnit TestCase" searchProperties="true" timeout="0"><con:settings/><con:testStep type="request" id="ea87aa71-f91c-4897-8c53-6168d679fcf7" name="ChangeLengthUnit"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>lengthUnitSoap12</con:interface><con:operation>ChangeLengthUnit</con:operation><con:request name="ChangeLengthUnit" id="1219e552-9488-4392-9207-cb00318f494a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/length.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <web:ChangeLengthUnit>\r
+         <web:LengthValue>?</web:LengthValue>\r
+         <web:fromLengthUnit>?</web:fromLengthUnit>\r
+         <web:toLengthUnit>?</web:toLengthUnit>\r
+      </web:ChangeLengthUnit>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.webserviceX.NET/lengthUnitSoap/ChangeLengthUnitRequest"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:authRepository/><con:tags/></con:soapui-project>
